@@ -1,0 +1,1 @@
+I’m an aspiring web developer with a passion for building cleaen and functional websites. Currently learning front-end technologies like HTML, CSS, JavaScript and React. I enjoy solving problems and constantly seek to improve my skills through hands-on practice and personal projects.
