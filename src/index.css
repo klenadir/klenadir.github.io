@@ -1,0 +1,33 @@
+/* src/index.css */
+
+body {
+  font-family: sans-serif; /* Anda bisa menyesuaikan font di sini */
+  margin: 0;
+}
+
+/* Gaya default untuk layout kolum (mobile first) */
+.main-container-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-panel, .right-panel {
+  width: 100%;
+}
+
+/* Media query untuk layar desktop (lebar minimal 768px) */
+@media (min-width: 768px) {
+  .main-container-flex {
+    flex-direction: row; /* Ubah menjadi baris di desktop */
+  }
+
+  .left-panel {
+    width: 33.33%; /* 1/3 lebar */
+  }
+
+  .right-panel {
+    width: 66.66%; /* 2/3 lebar */
+    border-left: 1px solid #eee; /* Tambahkan kembali border di sini */
+  }
+}
+
