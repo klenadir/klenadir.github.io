@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klenadir's Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5609f9de5f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-------header------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.webp" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Klenadir</span><br> from Indonesia</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-------about------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/logo.webp">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I’m an aspiring web developer with a passion for building cleaen and functional websites. Currently learning front-end technologies like HTML, CSS, JavaScript and React. I enjoy solving problems and constantly seek to improve my skills through hands-on practice and personal projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Lorem ipsum</span><br>Lorem ipsum dolor sit amet</li>
+                            <li><span>Lorem</span><br>Lorem ipsum dolor sit amet consectetur</li>
+                            <li><span>Ipsum</span><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>hbjmn jn,</span><br>ghjhvhgvbvgbvjhjh kghjkujvj</li>
+                            <li><span>hvkbjm jkj</span><br>htgkjgukjhcgh ugk,n</li>
+                            <li><span>jjb jjb</span><br>Building Android/IOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Lorem ipsum</span><br>Lorem ipsum dolor sit amet</li>
+                            <li><span>Lorem ipsum</span><br>Lorem ipsum dolor sit amet consectetur</li>
+                            <li><span>Lorem ipsum</span><br>Lorem ipsum dolor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------portfolio------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png">
+                    <div class="layer">
+                        <h3>Work 1</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto iusto explicabo minima sapiente molestiae pariatur sed sint praesentium blanditiis dicta ducimus obcaecati commodi, eius maxime fuga, id magnam. Deserunt, dolorum.</p>
+                        <a href="#" ><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.png">
+                    <div class="layer">
+                        <h3>Work 2</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto iusto explicabo minima sapiente molestiae pariatur sed sint praesentium blanditiis dicta ducimus obcaecati commodi, eius maxime fuga, id magnam. Deserunt, dolorum.</p>
+                        <a href="#" ><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.png">
+                    <div class="layer">
+                        <h3>Work 3</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto iusto explicabo minima sapiente molestiae pariatur sed sint praesentium blanditiis dicta ducimus obcaecati commodi, eius maxime fuga, id magnam. Deserunt, dolorum.</p>
+                        <a href="#" ><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>                
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-------contact------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> klenadir@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.x.com/klenadir"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com/klenadir"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+        var sidemeu= document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxcdPmPgPRd5euQyqKNDdizuWwA2eskxjXhu3GZiQjaJQQm4TFfcgX9qr7qoa9Apxs3/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
